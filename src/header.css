@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+.header {
+  background-color: #440e817a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+}
+
+.header__search {
+  display: flex;
+}
+
+.header_searchIcon {
+  background-color: orange;
+  padding: 5px;
+  border: none;
+  width: 100%;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
+}
