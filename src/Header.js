@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 export default function Header() {
   return (
@@ -26,20 +27,28 @@ export default function Header() {
       <div className="header_nav">
         <Link to="/login" className="header_link">
           <div class="header_option">
-            <span>Hello</span>
-            <span>Sign in</span>
+            <span className="header_option1">Hello</span>
+            <span className="header_option2">Sign in</span>
           </div>
         </Link>
         <Link to="/" className="header_link">
           <div class="header_option">
-            <span>Returns</span>
-            <span>& Orders</span>
+            <span className="header_option1">Returns</span>
+            <span className="header_option2">& Orders</span>
           </div>
         </Link>
         <Link to="/" className="header_link">
           <div class="header_option">
-            <span>Your</span>
-            <span>Prime</span>
+            <span className="header_option1">Your</span>
+            <span className="header_option2">Prime</span>
+          </div>
+        </Link>
+        <Link to="/checkout" className="header_link">
+          <div class="header_optionBasket">
+            {/* shipping cart icon  */}
+            <ShoppingCartIcon />
+            {/* number of items in basket  */}
+            <span>0</span>
           </div>
         </Link>
       </div>
