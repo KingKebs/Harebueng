@@ -12,6 +12,11 @@
   object-fit: contain;
 }
 
+.header_link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .header__search {
   display: flex;
 }
@@ -26,4 +31,30 @@
 .header_nav {
   display: flex;
   justify-content: space-evenly;
+}
+
+.header_option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.header_option1 {
+  font-size: 14px;
+}
+
+.header_option2 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.header_optionBasket {
+  display: flex;
+  align-items: center;
+}
+
+.header_basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }

@@ -23,11 +23,11 @@ export default function Header() {
         />
         <SearchIcon className="header_searchIcon" />
       </div>
-      {/* 3 links on the right hand side  */}
+      {/* LINKS */}
       <div className="header_nav">
         <Link to="/login" className="header_link">
           <div class="header_option">
-            <span className="header_option1">Hello</span>
+            <span className="header_option1">Hello KB</span>
             <span className="header_option2">Sign in</span>
           </div>
         </Link>
@@ -48,7 +48,7 @@ export default function Header() {
             {/* shipping cart icon  */}
             <ShoppingCartIcon />
             {/* number of items in basket  */}
-            <span>0</span>
+            <span className="header_option2 header_basketCount">0</span>
           </div>
         </Link>
       </div>
