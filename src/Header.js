@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <nav className="header">
       {/* logo image on the far left  */}
-      <Link to="/login">
+      <Link to="/">
         <img
           className="header__logo"
           src="http://pngimg.com/uploads/bison/bison_PNG92400.png"
@@ -19,7 +19,7 @@ export default function Header() {
         <input
           className="header__searchInput"
           type="text"
-          placeholder="ugly ass search bar "
+          placeholder="Search for items"
         />
         <SearchIcon className="header_searchIcon" />
       </div>
@@ -27,7 +27,7 @@ export default function Header() {
       <div className="header_nav">
         <Link to="/login" className="header_link">
           <div class="header_option">
-            <span className="header_option1">Hello KB</span>
+            <span className="header_option1">Hello Zuri</span>
             <span className="header_option2">Sign in</span>
           </div>
         </Link>
