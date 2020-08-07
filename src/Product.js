@@ -1,17 +1,27 @@
 import React from "react";
-import StarRating from "react-bootstrap-star-rating";
+import "./product.css";
+import Rating from "@material-ui/lab/Rating";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
-function product({ id, title, price, rating }) {
+function product({ title, price, rating, image }) {
   return (
     <div className="product">
-      <p>{title}</p>
-      <p className="product_price">
-        <small>R</small>
-        <strong>{price}</strong>
-      </p>
-      <div className="product_rating">
-        <StarRating defaultValue={rating} min={0} max={10} step={0.5} />
+      <div className="product_info">
+        <p>{title}</p>
+        <span className="product_price">
+          <small>R</small>
+          <strong>{price}</strong>
+        </span>
+        <div className="product_rating">
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography component="legend"></Typography>
+            <Rating name="simple-controlled" value={rating} />
+          </Box>
+        </div>
       </div>
+      <img src={image} alt="product" />
+      <button>Add to cart</button>
     </div>
   );
 }
