@@ -1,12 +1,15 @@
 // Setting up data later -> setting this up to manage state
-import React, { createContext, useContext, usereducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 
-// This is the data layer 
-export const  StateContext = createContext();
+// This is the data layer
+export const StateContext = createContext();
 
 // Lets build the provider
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateContext.Provider>
+);
 
-export const  StateProvider = createContext({reducer, initialState, children}) => {
-    
-}
-
+// this is whot we use it inside the component
+export const useStateValue = () => useContext(StateContext);

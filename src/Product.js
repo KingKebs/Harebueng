@@ -3,8 +3,24 @@ import "./product.css";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import { useStateValue } from "./StateProvider";
 
-function product({ title, price, rating, image }) {
+function Product({ id, title, price, rating, image }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    // add the seletected item to the basket
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product_info">
@@ -21,9 +37,9 @@ function product({ title, price, rating, image }) {
         </div>
       </div>
       <img src={image} alt="product" />
-      <button>Add to cart</button>
+      <button onClick={addToBasket}>Add to cart</button>
     </div>
   );
 }
 
-export default product;
+export default Product;
