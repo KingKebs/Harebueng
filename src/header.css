@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 .header {
-  background-color: #b49c4be7;
+  background-color: #1a1918e7;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -22,10 +22,11 @@
 
 .header__search {
   display: flex;
+  color: #000000;
 }
 
 .header_searchIcon {
-  background-color: orange;
+  background-color: #f0c14b;
   padding: 5px;
   border: none;
   width: 100%;

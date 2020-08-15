@@ -11,13 +11,46 @@ function Home() {
         alt="banner"
       />
       {/* Product pros: id title, rating, image */}
-      <Product
-        id="8775"
-        title="Muko Black"
-        price={11.96}
-        rating={4}
-        image={require("./images/mukoBlack.jpg")}
-      />
+      <div className="home_row">
+        <Product
+          id="8775"
+          title="Muko Black"
+          price={11.96}
+          image={require("./images/mukoBlack.jpg")}
+          rating={4}
+        />
+        <Product
+          id="8775"
+          title="Logic Bluetooth Speaker"
+          price={11.96}
+          image={require("./images/speaker.jpeg")}
+          rating={4}
+        />
+      </div>
+
+      <div className="home_row">
+        <Product
+          id="8775"
+          title="Muko Black"
+          price={11.96}
+          image={require("./images/mukoBlack.jpg")}
+          rating={4}
+        />
+        <Product
+          id="8775"
+          title="Muko Black"
+          price={11.96}
+          image={require("./images/mukoBlack.jpg")}
+          rating={4}
+        />
+        <Product
+          id="8775"
+          title="Muko Black"
+          price={11.96}
+          image={require("./images/mukoBlack.jpg")}
+          rating={4}
+        />
+      </div>
     </div>
   );
 }
