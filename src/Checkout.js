@@ -8,7 +8,7 @@ function Checkout() {
     <div className="checkout">
       <img
         className="checkout_ad"
-        src={require("./images/checkout.jpg")}
+        // src={require("./images/checkout.jpg")}
         alt="checkout"
       />
 
