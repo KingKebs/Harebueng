@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import React from "react";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
@@ -48,4 +46,3 @@ function CheckoutProduct({ id, title, price, rating, image }) {
 }
 
 export default CheckoutProduct;
->>>>>>> Stashed changes

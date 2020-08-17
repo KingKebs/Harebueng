@@ -16,9 +16,9 @@ function reducer(state, action) {
 
     case "REMOVE_FROM_BASKET":
       // logic Remove items from the basket
-<<<<<<< Updated upstream
+
       return { state };
-=======
+
       let newBasket = [...state.basket];
       // go and check all basket ListItemSecondaryAction, check if id in basket matches actionID
       const index = state.basket.findIndex(
@@ -33,7 +33,7 @@ function reducer(state, action) {
       }
 
       return { ...state, basket: newBasket };
->>>>>>> Stashed changes
+
     default:
       return state;
   }

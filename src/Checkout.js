@@ -12,7 +12,7 @@ function Checkout() {
         alt="checkout"
       />
 
-      {basket?.length === 0 ? (
+      {basket?.length === 0 ? ( // if no items on the cart display below
         <div>
           <h2 className="checkout_title">Your shopping cart is empty</h2>
           <p className="checkout_text">
