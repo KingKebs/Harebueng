@@ -1,7 +1,26 @@
 // Data layer logic goes into this file as an object
 
+export const basketTotal = (basket) =>
+  basket?.reduce((amount, item) => item.price + amount, 0);
+
 export const initialState = {
-  basket: [],
+  basket: [
+    {
+      id: "8775",
+      title: "Muko Black",
+      price: 101.96,
+      image: require("./images/mukoBlack.jpg"),
+      rating: 4,
+    },
+    {
+      id: "8776",
+      title: "Logic Bluetooth Speaker",
+      price: 212.17,
+      image: require("./images/speaker.jpeg"),
+      rating: 4,
+    },
+  ],
+  user: null,
 };
 
 function reducer(state, action) {
@@ -16,7 +35,20 @@ function reducer(state, action) {
 
     case "REMOVE_FROM_BASKET":
       // logic Remove items from the basket
-      return { state };
+      let newBasket = [...state.basket];
+      // go and check all basket ListItemSecondaryAction, check if id in basket matches actionID
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
+      if (index >= 0) {
+        // item does exist in basket,remove it by using the splice function.
+        newBasket.splice(index, 1); // get the item selected to be removed
+      } else {
+        console.warn(`cant remove product (id: ${action.id}) as its `);
+      }
+
+      return { ...state, basket: newBasket };
+
     default:
       return state;
   }
