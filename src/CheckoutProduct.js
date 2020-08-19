@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
 import React from "react";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
@@ -46,3 +51,7 @@ function CheckoutProduct({ id, title, price, rating, image }) {
 }
 
 export default CheckoutProduct;
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
