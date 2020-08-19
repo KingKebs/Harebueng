@@ -1,7 +1,9 @@
 import React from "react";
 import { useStateValue } from "./StateProvider";
-import "./checkout.css";
 import CheckoutProduct from "./CheckoutProduct";
+import Subtotal from "./Subtotal";
+
+import "./checkout.css";
 
 function Checkout() {
   const [{ basket }] = useStateValue();
@@ -9,11 +11,11 @@ function Checkout() {
     <div className="checkout">
       <img
         className="checkout_ad"
-        src={require("./images/checkout.jpg")}
+        src={require("./images/desktop-.jpg")}
         alt="checkout"
       />
-      {/* if there is nothing in the basket */}
-      {basket?.length === 0 ? (
+
+      {basket?.length === 0 ? ( // if no items on the cart display below
         <div>
           <h2 className="checkout_title">Your shopping cart is empty</h2>
           <p className="checkout_text">
@@ -22,11 +24,10 @@ function Checkout() {
           </p>
         </div>
       ) : (
-        // otherwise if items are in the cart
         <div>
           <h2 className="checkout_title"> Review your Shopping cart</h2>
-          {/* list out all the products on the baskey  */}
-          {basket.map((item) => (
+          {/* Map out all of the checkout products */}
+          {basket?.map((item) => (
             <CheckoutProduct
               id={item.id}
               title={item.title}
@@ -35,6 +36,13 @@ function Checkout() {
               rating={item.rating}
             />
           ))}
+        </div>
+      )}
+      {basket.length > 0 && (
+        <div className="checkout_right">
+          {/* <Subtotal /> */}
+          <h1>Subtotal</h1>
+          <Subtotal />
         </div>
       )}
     </div>
