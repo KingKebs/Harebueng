@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
 import React from "react";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import "./CheckoutProduct.css";
+import "./checkoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 function CheckoutProduct({ id, title, price, rating, image }) {
@@ -51,7 +47,3 @@ function CheckoutProduct({ id, title, price, rating, image }) {
 }
 
 export default CheckoutProduct;
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e

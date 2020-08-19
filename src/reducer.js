@@ -24,17 +24,18 @@ export const initialState = {
 };
 
 function reducer(state, action) {
-  console.log(action, state);
+  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       // logic for ADDING item to basket
       return {
-        ...state, // return curren state as is
-        basket: [...state.basket, action.item], // inclu current basket and add action.item which is the add button
+        ...state, // return current state as is
+        basket: [...state.basket, action.item], // add action.item + action.item to array
       };
 
     case "REMOVE_FROM_BASKET":
       // logic Remove items from the basket
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -63,6 +64,9 @@ function reducer(state, action) {
 =======
 >>>>>>> Stashed changes
 >>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
+=======
+      return { ...state };
+>>>>>>> master
     default:
       return state;
   }
