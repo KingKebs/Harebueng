@@ -35,22 +35,16 @@ function reducer(state, action) {
 
     case "REMOVE_FROM_BASKET":
       // logic Remove items from the basket
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
+
       return { state };
-=======
->>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
+      return { state };
+
       let newBasket = [...state.basket];
       // go and check all basket ListItemSecondaryAction, check if id in basket matches actionID
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
-<<<<<<< HEAD
-=======
 
->>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
       if (index >= 0) {
         // item does exist in basket,remove it by using the splice function.
         newBasket.splice(index, 1); // get the item selected to be removed
@@ -59,14 +53,7 @@ function reducer(state, action) {
       }
 
       return { ...state, basket: newBasket };
-<<<<<<< HEAD
-
-=======
->>>>>>> Stashed changes
->>>>>>> af397947b66a7349f17eef36dda0cbe5d2c58c1e
-=======
       return { ...state };
->>>>>>> master
     default:
       return state;
   }
