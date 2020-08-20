@@ -1,22 +1,42 @@
 // Data layer logic goes into this file as an object
 
+export const basketTotal = (basket) =>
+  basket?.reduce((amount, item) => item.price + amount, 0);
+
 export const initialState = {
-  basket: [],
+  basket: [
+    {
+      id: "8775",
+      title: "Muko Black",
+      price: 101.96,
+      image: require("./images/mukoBlack.jpg"),
+      rating: 4,
+    },
+    {
+      id: "8776",
+      title: "Logic Bluetooth Speaker",
+      price: 212.17,
+      image: require("./images/speaker.jpeg"),
+      rating: 4,
+    },
+  ],
+  user: null,
 };
 
 function reducer(state, action) {
-  console.log(action, state);
+  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       // logic for ADDING item to basket
       return {
-        ...state, // return curren state as is
-        basket: [...state.basket, action.item], // inclu current basket and add action.item which is the add button
+        ...state, // return current state as is
+        basket: [...state.basket, action.item], // add action.item + action.item to array
       };
 
     case "REMOVE_FROM_BASKET":
       // logic Remove items from the basket
 
+      return { state };
       return { state };
 
       let newBasket = [...state.basket];
@@ -33,7 +53,7 @@ function reducer(state, action) {
       }
 
       return { ...state, basket: newBasket };
-
+      return { ...state };
     default:
       return state;
   }

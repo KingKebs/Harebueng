@@ -6,7 +6,6 @@ import { useStateValue } from "./StateProvider";
 
 export default function Header() {
   const [{ basket }] = useStateValue();
-  console.log(basket);
   return (
     <nav className="header">
       {/* logo image on the far left  */}

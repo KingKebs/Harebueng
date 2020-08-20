@@ -10,21 +10,21 @@ function Home() {
         src={require("./images/ecommerce-2140603_960_720.jpg")}
         alt="banner"
       />
-      {/* Product pros: id title, rating, image */}
+      {/* Product props: id title, rating, image */}
       <div className="home_row">
         <Product
           id="8775"
           title="Muko Black"
-          price={11.96}
+          price={102.36}
           image={require("./images/mukoBlack.jpg")}
           rating={4}
         />
         <Product
-          id="8775"
+          id="8776"
           title="Logic Bluetooth Speaker"
-          price={11.96}
+          price={256.1}
           image={require("./images/speaker.jpeg")}
-          rating={4}
+          rating={3}
         />
       </div>
 
