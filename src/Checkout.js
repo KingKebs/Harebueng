@@ -11,7 +11,7 @@ function Checkout() {
     <div className="checkout">
       <img
         className="checkout_ad"
-        src={require("./images/desktop-.jpg")}
+        src={require("./images/desktop-1155613_960_720.jpg")}
         alt="checkout"
       />
 
